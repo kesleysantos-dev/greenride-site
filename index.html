@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Green Ride | Mobilidade Elétrica</title>
+  <meta name="description" content="Green Ride — scooters, motos e triciclos elétricos com o melhor preço. Economia, tecnologia e sustentabilidade para o seu dia a dia.">
+  <meta name="theme-color" content="#0a0c0a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a0c0a' stroke='%238fd400' stroke-width='4'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%23fff'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ilustrações dos modelos (cor do chassi herdada via currentColor) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="wheel" viewBox="-50 -50 100 100">
+        <circle r="46" fill="#111"/>
+        <circle r="40" fill="none" stroke="#2a2a2a" stroke-width="4" stroke-dasharray="3 5"/>
+        <circle r="27" fill="#3a3d3a"/>
+        <circle r="24" fill="#c9cdc9"/>
+        <g stroke="#7d827d" stroke-width="5" stroke-linecap="round">
+          <line x1="0" y1="-20" x2="0" y2="20"/><line x1="-17" y1="-10" x2="17" y2="10"/><line x1="-17" y1="10" x2="17" y2="-10"/>
+        </g>
+        <circle r="8" fill="#2a2a2a"/>
+      </symbol>
+
+      <!-- Scooter urbana com cesto -->
+      <symbol id="m-city" viewBox="0 0 400 280">
+        <ellipse cx="200" cy="262" rx="170" ry="9" fill="#000" opacity=".18"/>
+        <line x1="296" y1="80" x2="318" y2="214" stroke="#222" stroke-width="10" stroke-linecap="round"/>
+        <path d="M58 182 Q60 130 120 124 L222 120 Q240 120 242 140 L246 182 Q200 196 150 192 Z" fill="currentColor"/>
+        <path d="M70 176 Q90 150 140 150" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+        <rect x="150" y="176" width="130" height="16" rx="6" fill="#1b1d1b"/>
+        <path d="M262 188 L286 82 Q290 68 304 70 L312 72 Q306 130 304 188 Z" fill="currentColor"/>
+        <path d="M110 120 Q114 100 140 100 L214 102 Q228 104 224 118 Z" fill="#161716"/>
+        <rect x="56" y="150" width="20" height="10" rx="3" fill="#ff3b30"/>
+        <line x1="300" y1="72" x2="306" y2="36" stroke="#222" stroke-width="8" stroke-linecap="round"/>
+        <line x1="282" y1="36" x2="330" y2="30" stroke="#222" stroke-width="7" stroke-linecap="round"/>
+        <line x1="290" y1="34" x2="282" y2="14" stroke="#222" stroke-width="3"/><ellipse cx="281" cy="12" rx="7" ry="5" fill="#222"/>
+        <circle cx="314" cy="58" r="11" fill="#f2f6e8" stroke="#222" stroke-width="4"/>
+        <g transform="translate(316 34)">
+          <rect width="48" height="30" rx="4" fill="none" stroke="#2b2b2b" stroke-width="4"/>
+          <path d="M12 0V30M24 0V30M36 0V30M0 15H48" stroke="#2b2b2b" stroke-width="2"/>
+        </g>
+        <use href="#wheel" x="48" y="172" width="92" height="92"/>
+        <use href="#wheel" x="272" y="172" width="92" height="92"/>
+      </symbol>
+
+      <!-- Citycoco / moto robusta -->
+      <symbol id="m-coco" viewBox="0 0 400 280">
+        <ellipse cx="200" cy="262" rx="175" ry="9" fill="#000" opacity=".18"/>
+        <line x1="290" y1="70" x2="322" y2="212" stroke="#d8dbd8" stroke-width="9" stroke-linecap="round"/>
+        <line x1="300" y1="70" x2="332" y2="212" stroke="#9aa09a" stroke-width="5" stroke-linecap="round"/>
+        <path d="M40 160 Q46 112 110 106 L250 104 Q290 104 292 140 L296 176 Q240 200 140 196 Q70 194 40 160 Z" fill="currentColor"/>
+        <path d="M70 130 Q120 116 240 118" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+        <path d="M90 104 Q94 78 130 78 L232 80 Q256 82 252 104 Z" fill="#141514"/>
+        <rect x="150" y="136" width="70" height="40" rx="8" fill="#1b1d1b"/>
+        <path d="M159 146h52M159 156h52M159 166h52" stroke="#333" stroke-width="3"/>
+        <rect x="36" y="128" width="20" height="12" rx="3" fill="#ff3b30"/>
+        <line x1="290" y1="70" x2="284" y2="34" stroke="#222" stroke-width="8" stroke-linecap="round"/>
+        <line x1="262" y1="32" x2="312" y2="28" stroke="#222" stroke-width="7" stroke-linecap="round"/>
+        <line x1="270" y1="30" x2="258" y2="10" stroke="#222" stroke-width="3"/><ellipse cx="256" cy="8" rx="8" ry="5" fill="#222"/>
+        <circle cx="306" cy="64" r="16" fill="#f2f6e8" stroke="#222" stroke-width="5"/>
+        <circle cx="306" cy="64" r="7" fill="#fffbd6"/>
+        <use href="#wheel" x="28" y="160" width="106" height="106"/>
+        <use href="#wheel" x="276" y="160" width="106" height="106"/>
+      </symbol>
+
+      <!-- Triciclo -->
+      <symbol id="m-trike" viewBox="0 0 400 280">
+        <ellipse cx="200" cy="262" rx="175" ry="9" fill="#000" opacity=".18"/>
+        <use href="#wheel" x="70" y="166" width="84" height="84" opacity=".55"/>
+        <line x1="300" y1="84" x2="320" y2="214" stroke="#222" stroke-width="10" stroke-linecap="round"/>
+        <path d="M44 186 Q44 140 96 134 L230 132 Q252 132 254 152 L258 190 Q200 202 120 200 Q60 198 44 186 Z" fill="currentColor"/>
+        <path d="M100 132 Q102 108 128 106 L208 108 Q226 110 222 130 Z" fill="#141514"/>
+        <path d="M96 108 L92 50 Q92 38 106 40 L124 44 Q132 46 130 58 L126 108 Z" fill="#141514"/>
+        <g transform="translate(26 92)">
+          <rect width="62" height="40" rx="5" fill="none" stroke="#2b2b2b" stroke-width="4"/>
+          <path d="M15 0V40M31 0V40M47 0V40M0 20H62" stroke="#2b2b2b" stroke-width="2"/>
+        </g>
+        <rect x="160" y="182" width="110" height="14" rx="6" fill="#1b1d1b"/>
+        <path d="M262 194 L286 92 Q290 78 304 80 L314 82 Q308 140 306 194 Z" fill="currentColor"/>
+        <line x1="302" y1="82" x2="306" y2="44" stroke="#222" stroke-width="8" stroke-linecap="round"/>
+        <line x1="282" y1="44" x2="330" y2="38" stroke="#222" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="316" cy="70" r="12" fill="#f2f6e8" stroke="#222" stroke-width="4"/>
+        <use href="#wheel" x="36" y="176" width="84" height="84"/>
+        <use href="#wheel" x="278" y="176" width="84" height="84"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__logo">
+      <span class="logo-mark"><span>R</span></span>
+      <span class="loader__bar"><i></i></span>
+    </div>
+  </div>
+
+  <header class="header" id="topo">
+    <a href="#inicio" class="brand" aria-label="Green Ride — início">
+      <span class="logo-mark"><span>R</span></span>
+      <span class="brand__text">GREEN<b>RIDE</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#como-comprar">Como comprar</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#" class="btn btn--sm btn--primary header__cta" data-wa="Olá! Vim pelo site da Green Ride e gostaria de mais informações.">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-wa"/></svg> WhatsApp
+    </a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" data-parallax="0.45">
+        <video class="hero__video" autoplay muted playsinline loop preload="auto" poster="assets/img/hero-poster.jpg" data-loop-seconds="15">
+          <source src="assets/video/hero.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero__shade"></div>
+      <div class="hero__grain"></div>
+
+      <div class="hero__content container" data-parallax="-0.15">
+        <p class="eyebrow hero__eyebrow"><span class="pulse"></span> Loja de mobilidade elétrica</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Rode o futuro.</span></span>
+          <span class="line"><span class="accent">Pague menos</span></span>
+          <span class="line"><span>pra se mover.</span></span>
+        </h1>
+        <p class="hero__lead">Scooters, motos e triciclos elétricos para quem quer liberdade, economia e zero combustível. Recarregue na tomada e vá aonde quiser.</p>
+        <div class="hero__actions">
+          <a href="#modelos" class="btn btn--primary magnetic">Ver modelos <span class="arrow">→</span></a>
+          <a href="#" class="btn btn--ghost magnetic" data-wa="Olá! Quero agendar um test ride na Green Ride.">Agendar test ride</a>
+        </div>
+      </div>
+
+      <ul class="hero__stats container">
+        <li><strong data-count="0.10" data-decimals="2" data-prefix="R$ ">0</strong><span>custo médio por km*</span></li>
+        <li><strong data-count="80" data-suffix=" km">0</strong><span>de autonomia</span></li>
+        <li><strong data-count="12" data-suffix="x">0</strong><span>sem juros no cartão</span></li>
+      </ul>
+
+      <a href="#marquee" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Economia</span><i>⚡</i><span>Tecnologia</span><i>⚡</i><span>Sustentabilidade</span><i>⚡</i><span>Menor preço</span><i>⚡</i><span>Zero combustível</span><i>⚡</i><span>Garantia</span><i>⚡</i>
+        <span>Economia</span><i>⚡</i><span>Tecnologia</span><i>⚡</i><span>Sustentabilidade</span><i>⚡</i><span>Menor preço</span><i>⚡</i><span>Zero combustível</span><i>⚡</i><span>Garantia</span><i>⚡</i>
+      </div>
+    </div>
+
+    <!-- MODELOS -->
+    <section class="section models" id="modelos">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal">Nossa linha</p>
+            <h2 class="section__title reveal">Escolha o seu <span class="accent">modelo</span></h2>
+          </div>
+          <p class="section__sub reveal">Toque em um modelo para ver ficha técnica, cores e falar direto com um consultor.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar modelos">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="filter" data-filter="scooter" role="tab" aria-selected="false">Scooters</button>
+          <button class="filter" data-filter="moto" role="tab" aria-selected="false">Motos</button>
+          <button class="filter" data-filter="triciclo" role="tab" aria-selected="false">Triciclos</button>
+        </div>
+
+        <div class="grid" id="models-grid"></div>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section class="section perks" id="vantagens">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow reveal">Por que elétrico?</p>
+          <h2 class="section__title reveal">Mais liberdade, <span class="accent">menos custo</span></h2>
+        </div>
+        <div class="perks__grid">
+          <article class="perk reveal">
+            <div class="perk__icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Economia real</h3>
+            <p>Uma recarga completa custa poucos reais. Sem gasolina, sem troca de óleo e com manutenção mínima.</p>
+          </article>
+          <article class="perk reveal">
+            <div class="perk__icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h3>Tecnologia</h3>
+            <p>Painel digital, alarme com controle, luzes em LED e bateria de lítio removível para carregar onde quiser.</p>
+          </article>
+          <article class="perk reveal">
+            <div class="perk__icon"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+            <h3>Sustentável</h3>
+            <p>Zero emissão de poluentes e silêncio total. Você se move e a cidade agradece.</p>
+          </article>
+          <article class="perk reveal">
+            <div class="perk__icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Garantia & suporte</h3>
+            <p>Garantia de fábrica, assistência técnica própria e peças de reposição a pronta entrega.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX BANNER -->
+    <section class="banner" aria-label="Oferta">
+      <div class="banner__bg" data-parallax="0.3"></div>
+      <div class="banner__shade"></div>
+      <div class="container banner__content">
+        <p class="eyebrow reveal">Condição especial</p>
+        <h2 class="banner__title reveal">Seu elétrico em até <span class="accent">12x sem juros</span></h2>
+        <p class="reveal">Aceitamos Pix, cartão e financiamento. Consulte a condição do mês com nossos consultores.</p>
+        <a href="#" class="btn btn--primary magnetic reveal" data-wa="Olá! Quero saber das condições de pagamento da Green Ride.">Consultar condições <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- COMO COMPRAR -->
+    <section class="section steps" id="como-comprar">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal">Simples assim</p>
+            <h2 class="section__title reveal">Como <span class="accent">comprar</span></h2>
+          </div>
+          <p class="section__sub reveal">Do primeiro contato à entrega, a gente acompanha você em cada etapa.</p>
+        </div>
+        <ol class="steps__list">
+          <li class="step reveal"><span class="step__n">01</span><h3>Escolha o modelo</h3><p>Navegue pela nossa linha e encontre o elétrico ideal para sua rotina.</p></li>
+          <li class="step reveal"><span class="step__n">02</span><h3>Fale com a gente</h3><p>Tire dúvidas pelo WhatsApp e agende um test ride sem compromisso.</p></li>
+          <li class="step reveal"><span class="step__n">03</span><h3>Pagamento facilitado</h3><p>Pix com desconto, cartão em até 12x ou financiamento.</p></li>
+          <li class="step reveal"><span class="step__n">04</span><h3>Retire e rode</h3><p>Retire na loja ou receba em casa, pronto para rodar.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="numbers">
+      <div class="container numbers__grid">
+        <div class="number reveal"><strong data-count="1500" data-suffix="+">0</strong><span>clientes rodando</span></div>
+        <div class="number reveal"><strong data-count="8">0</strong><span>modelos disponíveis</span></div>
+        <div class="number reveal"><strong data-count="4.9" data-decimals="1">0</strong><span>nota média de avaliação</span></div>
+        <div class="number reveal"><strong data-count="1" data-suffix=" ano">0</strong><span>de garantia de fábrica</span></div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow reveal">Quem já roda</p>
+          <h2 class="section__title reveal">O que dizem nossos <span class="accent">clientes</span></h2>
+        </div>
+        <div class="tgrid">
+          <figure class="tcard reveal">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Uso todo dia para ir ao trabalho. Economizo muito com combustível e não pego mais trânsito parado.”</blockquote>
+            <figcaption><span class="avatar">M</span><div><b>Marina S.</b><small>Cliente Connect X21</small></div></figcaption>
+          </figure>
+          <figure class="tcard reveal">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Comprei o triciclo para minha mãe e foi a melhor decisão. Estável, confortável e muito fácil de usar.”</blockquote>
+            <figcaption><span class="avatar">R</span><div><b>Ricardo A.</b><small>Cliente Triciclo X3</small></div></figcaption>
+          </figure>
+          <figure class="tcard reveal">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Atendimento excelente do início ao fim. Tiraram todas as dúvidas pelo WhatsApp e entregaram rapidinho.”</blockquote>
+            <figcaption><span class="avatar">J</span><div><b>Juliana P.</b><small>Cliente Stack 800W</small></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container faq__wrap">
+        <div>
+          <p class="eyebrow reveal">Dúvidas</p>
+          <h2 class="section__title reveal">Perguntas <span class="accent">frequentes</span></h2>
+          <p class="section__sub reveal">Não encontrou sua resposta? Chame a gente no WhatsApp.</p>
+        </div>
+        <div class="faq__list">
+          <details class="reveal"><summary>Quanto tempo leva para carregar a bateria?</summary><p>Em média de 4 a 8 horas em uma tomada comum, dependendo do modelo e da capacidade da bateria.</p></details>
+          <details class="reveal"><summary>Preciso de habilitação para pilotar?</summary><p>Depende da categoria e da potência do veículo. Nossos consultores explicam a regra de cada modelo antes da compra.</p></details>
+          <details class="reveal"><summary>Qual é a autonomia dos modelos?</summary><p>Varia de 40 a 80 km por carga, conforme o modelo, o peso transportado e o tipo de trajeto.</p></details>
+          <details class="reveal"><summary>Vocês oferecem garantia e assistência?</summary><p>Sim. Todos os modelos têm garantia de fábrica e contamos com assistência técnica e peças de reposição.</p></details>
+          <details class="reveal"><summary>Fazem entrega?</summary><p>Sim, entregamos na região. Consulte prazo e valor de frete para o seu endereço.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTATO -->
+    <section class="section contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__card reveal">
+          <p class="eyebrow">Visite a loja</p>
+          <h2 class="section__title">Vem dar uma <span class="accent">volta</span> com a gente</h2>
+          <ul class="contact__info">
+            <li><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Av. Exemplo, 1000 — Centro<br>Sua Cidade — UF, 00000-000</span></li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a Sex: 9h às 18h<br>Sábado: 9h às 13h</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>(00) 00000-0000</span></li>
+            <li><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span>contato@greenride.com.br</span></li>
+          </ul>
+          <a href="#" class="btn btn--primary magnetic" data-wa="Olá! Vim pelo site da Green Ride e gostaria de atendimento.">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-wa"/></svg> Chamar no WhatsApp
+          </a>
+        </div>
+        <div class="contact__map reveal">
+          <iframe title="Mapa da loja" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-46.66%2C-23.57%2C-46.62%2C-23.54&amp;layer=mapnik"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#inicio" class="brand"><span class="logo-mark"><span>R</span></span><span class="brand__text">GREEN<b>RIDE</b></span></a>
+        <p class="footer__tag">Mobilidade elétrica · Economia · Tecnologia · Sustentabilidade</p>
+        <div class="socials">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5c0-.6.4-1 1-1h2z"/></svg></a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 3c.5 3 2.5 5 5.5 5"/></svg></a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul><li><a href="#modelos">Modelos</a></li><li><a href="#vantagens">Vantagens</a></li><li><a href="#como-comprar">Como comprar</a></li><li><a href="#faq">Dúvidas</a></li></ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li>(00) 00000-0000</li><li>contato@greenride.com.br</li><li>Av. Exemplo, 1000 — Centro</li></ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <small>© <span id="year"></span> Green Ride Mobilidade Elétrica. Todos os direitos reservados.</small>
+      <small>*Estimativa baseada em tarifa média de energia residencial.</small>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="#" class="wa-float" data-wa="Olá! Vim pelo site da Green Ride." aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-wa"/></svg>
+  </a>
+
+  <!-- Modal do modelo -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <article class="modal__card">
+      <button class="modal__close" data-close aria-label="Fechar">✕</button>
+      <div class="modal__media">
+        <span class="modal__tag" id="modal-tag"></span>
+        <svg class="modal__img" id="modal-img" viewBox="0 0 400 280" role="img"><use href=""/></svg>
+        <div class="modal__colors" id="modal-colors" aria-label="Cores disponíveis"></div>
+      </div>
+      <div class="modal__body">
+        <p class="eyebrow" id="modal-cat"></p>
+        <h3 class="modal__title" id="modal-title"></h3>
+        <p class="modal__desc" id="modal-desc"></p>
+        <dl class="specs" id="modal-specs"></dl>
+        <div class="modal__price">
+          <small>a partir de</small>
+          <strong id="modal-price"></strong>
+          <span id="modal-install"></span>
+        </div>
+        <a href="#" class="btn btn--primary btn--block" id="modal-wa" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-wa"/></svg> Quero este modelo
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47a9.4 9.4 0 0 1 6.7 2.78 9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.46-9.47 9.46zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2 .53 3.96 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></symbol>
+  </svg>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
