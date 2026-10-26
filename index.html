@@ -14,85 +14,6 @@
 </head>
 <body>
 
-  <!-- Ilustrações dos modelos (cor do chassi herdada via currentColor) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="wheel" viewBox="-50 -50 100 100">
-        <circle r="46" fill="#111"/>
-        <circle r="40" fill="none" stroke="#2a2a2a" stroke-width="4" stroke-dasharray="3 5"/>
-        <circle r="27" fill="#3a3d3a"/>
-        <circle r="24" fill="#c9cdc9"/>
-        <g stroke="#7d827d" stroke-width="5" stroke-linecap="round">
-          <line x1="0" y1="-20" x2="0" y2="20"/><line x1="-17" y1="-10" x2="17" y2="10"/><line x1="-17" y1="10" x2="17" y2="-10"/>
-        </g>
-        <circle r="8" fill="#2a2a2a"/>
-      </symbol>
-
-      <!-- Scooter urbana com cesto -->
-      <symbol id="m-city" viewBox="0 0 400 280">
-        <ellipse cx="200" cy="262" rx="170" ry="9" fill="#000" opacity=".18"/>
-        <line x1="296" y1="80" x2="318" y2="214" stroke="#222" stroke-width="10" stroke-linecap="round"/>
-        <path d="M58 182 Q60 130 120 124 L222 120 Q240 120 242 140 L246 182 Q200 196 150 192 Z" fill="currentColor"/>
-        <path d="M70 176 Q90 150 140 150" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
-        <rect x="150" y="176" width="130" height="16" rx="6" fill="#1b1d1b"/>
-        <path d="M262 188 L286 82 Q290 68 304 70 L312 72 Q306 130 304 188 Z" fill="currentColor"/>
-        <path d="M110 120 Q114 100 140 100 L214 102 Q228 104 224 118 Z" fill="#161716"/>
-        <rect x="56" y="150" width="20" height="10" rx="3" fill="#ff3b30"/>
-        <line x1="300" y1="72" x2="306" y2="36" stroke="#222" stroke-width="8" stroke-linecap="round"/>
-        <line x1="282" y1="36" x2="330" y2="30" stroke="#222" stroke-width="7" stroke-linecap="round"/>
-        <line x1="290" y1="34" x2="282" y2="14" stroke="#222" stroke-width="3"/><ellipse cx="281" cy="12" rx="7" ry="5" fill="#222"/>
-        <circle cx="314" cy="58" r="11" fill="#f2f6e8" stroke="#222" stroke-width="4"/>
-        <g transform="translate(316 34)">
-          <rect width="48" height="30" rx="4" fill="none" stroke="#2b2b2b" stroke-width="4"/>
-          <path d="M12 0V30M24 0V30M36 0V30M0 15H48" stroke="#2b2b2b" stroke-width="2"/>
-        </g>
-        <use href="#wheel" x="48" y="172" width="92" height="92"/>
-        <use href="#wheel" x="272" y="172" width="92" height="92"/>
-      </symbol>
-
-      <!-- Citycoco / moto robusta -->
-      <symbol id="m-coco" viewBox="0 0 400 280">
-        <ellipse cx="200" cy="262" rx="175" ry="9" fill="#000" opacity=".18"/>
-        <line x1="290" y1="70" x2="322" y2="212" stroke="#d8dbd8" stroke-width="9" stroke-linecap="round"/>
-        <line x1="300" y1="70" x2="332" y2="212" stroke="#9aa09a" stroke-width="5" stroke-linecap="round"/>
-        <path d="M40 160 Q46 112 110 106 L250 104 Q290 104 292 140 L296 176 Q240 200 140 196 Q70 194 40 160 Z" fill="currentColor"/>
-        <path d="M70 130 Q120 116 240 118" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
-        <path d="M90 104 Q94 78 130 78 L232 80 Q256 82 252 104 Z" fill="#141514"/>
-        <rect x="150" y="136" width="70" height="40" rx="8" fill="#1b1d1b"/>
-        <path d="M159 146h52M159 156h52M159 166h52" stroke="#333" stroke-width="3"/>
-        <rect x="36" y="128" width="20" height="12" rx="3" fill="#ff3b30"/>
-        <line x1="290" y1="70" x2="284" y2="34" stroke="#222" stroke-width="8" stroke-linecap="round"/>
-        <line x1="262" y1="32" x2="312" y2="28" stroke="#222" stroke-width="7" stroke-linecap="round"/>
-        <line x1="270" y1="30" x2="258" y2="10" stroke="#222" stroke-width="3"/><ellipse cx="256" cy="8" rx="8" ry="5" fill="#222"/>
-        <circle cx="306" cy="64" r="16" fill="#f2f6e8" stroke="#222" stroke-width="5"/>
-        <circle cx="306" cy="64" r="7" fill="#fffbd6"/>
-        <use href="#wheel" x="28" y="160" width="106" height="106"/>
-        <use href="#wheel" x="276" y="160" width="106" height="106"/>
-      </symbol>
-
-      <!-- Triciclo -->
-      <symbol id="m-trike" viewBox="0 0 400 280">
-        <ellipse cx="200" cy="262" rx="175" ry="9" fill="#000" opacity=".18"/>
-        <use href="#wheel" x="70" y="166" width="84" height="84" opacity=".55"/>
-        <line x1="300" y1="84" x2="320" y2="214" stroke="#222" stroke-width="10" stroke-linecap="round"/>
-        <path d="M44 186 Q44 140 96 134 L230 132 Q252 132 254 152 L258 190 Q200 202 120 200 Q60 198 44 186 Z" fill="currentColor"/>
-        <path d="M100 132 Q102 108 128 106 L208 108 Q226 110 222 130 Z" fill="#141514"/>
-        <path d="M96 108 L92 50 Q92 38 106 40 L124 44 Q132 46 130 58 L126 108 Z" fill="#141514"/>
-        <g transform="translate(26 92)">
-          <rect width="62" height="40" rx="5" fill="none" stroke="#2b2b2b" stroke-width="4"/>
-          <path d="M15 0V40M31 0V40M47 0V40M0 20H62" stroke="#2b2b2b" stroke-width="2"/>
-        </g>
-        <rect x="160" y="182" width="110" height="14" rx="6" fill="#1b1d1b"/>
-        <path d="M262 194 L286 92 Q290 78 304 80 L314 82 Q308 140 306 194 Z" fill="currentColor"/>
-        <line x1="302" y1="82" x2="306" y2="44" stroke="#222" stroke-width="8" stroke-linecap="round"/>
-        <line x1="282" y1="44" x2="330" y2="38" stroke="#222" stroke-width="7" stroke-linecap="round"/>
-        <circle cx="316" cy="70" r="12" fill="#f2f6e8" stroke="#222" stroke-width="4"/>
-        <use href="#wheel" x="36" y="176" width="84" height="84"/>
-        <use href="#wheel" x="278" y="176" width="84" height="84"/>
-      </symbol>
-    </defs>
-  </svg>
-
   <div class="loader" aria-hidden="true">
     <div class="loader__logo">
       <span class="logo-mark"><span>R</span></span>
@@ -124,7 +45,8 @@
     <section class="hero" id="inicio">
       <div class="hero__media" data-parallax="0.45">
         <video class="hero__video" autoplay muted playsinline loop preload="auto" poster="assets/img/hero-poster.jpg" data-loop-seconds="15">
-          <source src="assets/video/hero.mp4" type="video/mp4">
+          <source src="assets/video/hero-720.mp4" type="video/mp4" media="(max-width: 900px)">
+          <source src="assets/video/hero-1080.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hero__shade"></div>
@@ -277,7 +199,7 @@
           <figure class="tcard reveal">
             <div class="stars" aria-label="5 estrelas">★★★★★</div>
             <blockquote>“Atendimento excelente do início ao fim. Tiraram todas as dúvidas pelo WhatsApp e entregaram rapidinho.”</blockquote>
-            <figcaption><span class="avatar">J</span><div><b>Juliana P.</b><small>Cliente Stack 800W</small></div></figcaption>
+            <figcaption><span class="avatar">J</span><div><b>Juliana P.</b><small>Cliente Classic E</small></div></figcaption>
           </figure>
         </div>
       </div>
@@ -364,8 +286,8 @@
       <button class="modal__close" data-close aria-label="Fechar">✕</button>
       <div class="modal__media">
         <span class="modal__tag" id="modal-tag"></span>
-        <svg class="modal__img" id="modal-img" viewBox="0 0 400 280" role="img"><use href=""/></svg>
-        <div class="modal__colors" id="modal-colors" aria-label="Cores disponíveis"></div>
+        <img class="modal__img" id="modal-img" alt="" width="1200" height="800" decoding="async">
+        <div class="modal__colors" id="modal-colors"></div>
       </div>
       <div class="modal__body">
         <p class="eyebrow" id="modal-cat"></p>

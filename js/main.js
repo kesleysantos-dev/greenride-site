@@ -7,90 +7,99 @@ const STORE = {
   whatsapp: "5500000000000",
 };
 
+// Fotos em assets/img/modelos/ — "focus" ajusta o enquadramento no card (object-position)
 const MODELS = [
   {
-    id: "stack-800",
-    name: "Stack 800W",
+    id: "classic-e",
+    name: "Classic E",
     category: "scooter",
-    shape: "m-city",
+    img: "classic-e.jpg",
+    focus: "50% 60%",
     badge: "Mais vendido",
-    desc: "Compacta, leve e com cesto frontal. Ideal para o dia a dia na cidade, compras e trajetos curtos.",
-    price: 6990,
-    colors: ["#1c1f1c", "#f2c200", "#e9ece6"],
-    specs: { Motor: "800W", Autonomia: "50 km", "Vel. máx.": "32 km/h", Recarga: "6 a 8 h", Bateria: "48V 20Ah", Freio: "Disco" },
+    desc: "Design retrô com alma elétrica. Banco amplo, bagageiro e pegada urbana para o dia a dia.",
+    price: 7490,
+    colors: [["Amarelo", "#f2b134"], ["Preto", "#1c1f1c"], ["Branco", "#e9ece6"]],
+    specs: { Motor: "1200W", Autonomia: "60 km", "Vel. máx.": "45 km/h", Recarga: "5 a 7 h", Bateria: "60V 26Ah lítio", Freio: "Disco" },
   },
   {
     id: "connect-x21",
     name: "Connect X21",
     category: "moto",
-    shape: "m-coco",
+    img: "connect-x21.jpg",
+    focus: "35% 60%",
     badge: "Lançamento",
     desc: "Estilo citycoco com pneus largos, banco para duas pessoas e muito torque para subir ladeiras.",
     price: 9490,
-    colors: ["#d7262e", "#1c1f1c", "#1f4fd1"],
+    colors: [["Verde", "#5e8f1f"], ["Preto", "#1c1f1c"], ["Vermelho", "#d7262e"]],
     specs: { Motor: "2000W", Autonomia: "60 km", "Vel. máx.": "45 km/h", Recarga: "6 a 8 h", Bateria: "60V 20Ah", Freio: "Disco duplo" },
   },
   {
-    id: "connect-x11",
-    name: "Connect X11",
+    id: "tank-3000",
+    name: "Tank 3000",
     category: "moto",
-    shape: "m-coco",
-    desc: "A versão urbana da linha Connect: visual robusto, painel digital e alarme com controle remoto.",
-    price: 8590,
-    colors: ["#1f4fd1", "#e9ece6", "#1c1f1c"],
-    specs: { Motor: "1500W", Autonomia: "55 km", "Vel. máx.": "40 km/h", Recarga: "6 a 8 h", Bateria: "60V 20Ah", Freio: "Disco" },
+    img: "tank-3000.jpg",
+    focus: "50% 55%",
+    badge: "Potência",
+    desc: "O topo da linha: visual esportivo, motor de 3000W e bateria de lítio removível para rodar o dia inteiro.",
+    price: 15990,
+    colors: [["Vermelho", "#c4161c"], ["Preto", "#1c1f1c"]],
+    specs: { Motor: "3000W", Autonomia: "90 km", "Vel. máx.": "80 km/h", Recarga: "4 a 6 h", Bateria: "72V 40Ah lítio", Freio: "Disco duplo" },
   },
   {
     id: "triciclo-x3",
     name: "Triciclo X3",
     category: "triciclo",
-    shape: "m-trike",
+    img: "triciclo-x3.jpg",
+    focus: "50% 62%",
     badge: "Conforto",
-    desc: "Três rodas, banco com encosto e cesto traseiro. Estabilidade e segurança para todas as idades.",
+    desc: "Três rodas, banco com encosto e cesto frontal. Estabilidade e segurança para todas as idades.",
     price: 8390,
-    colors: ["#1c1f1c", "#8a1f2b", "#e9ece6"],
+    colors: [["Preto", "#1c1f1c"], ["Cinza", "#8a8f88"]],
     specs: { Motor: "650W", Autonomia: "45 km", "Vel. máx.": "25 km/h", Recarga: "6 a 8 h", Bateria: "48V 20Ah", Freio: "Tambor" },
   },
   {
     id: "city-lite",
     name: "City Lite",
     category: "scooter",
-    shape: "m-city",
+    img: "city-lite.jpg",
+    focus: "50% 68%",
     desc: "A porta de entrada para a mobilidade elétrica. Leve, econômica e fácil de estacionar.",
     price: 5490,
-    colors: ["#e9ece6", "#7fbf2a", "#1c1f1c"],
-    specs: { Motor: "500W", Autonomia: "40 km", "Vel. máx.": "25 km/h", Recarga: "5 a 7 h", Bateria: "48V 12Ah", Freio: "Tambor" },
+    colors: [["Verde oliva", "#7d8a5a"], ["Branco", "#e9ece6"], ["Preto", "#1c1f1c"]],
+    specs: { Motor: "800W", Autonomia: "45 km", "Vel. máx.": "32 km/h", Recarga: "5 a 7 h", Bateria: "48V 20Ah", Freio: "Tambor" },
   },
   {
-    id: "tank-3000",
-    name: "Tank 3000",
+    id: "connect-x11",
+    name: "Connect X11",
     category: "moto",
-    shape: "m-coco",
-    badge: "Potência",
-    desc: "O topo da linha: motor de 3000W, bateria de lítio removível e autonomia para rodar o dia inteiro.",
-    price: 12990,
-    colors: ["#1c1f1c", "#5d6658", "#d7262e"],
-    specs: { Motor: "3000W", Autonomia: "80 km", "Vel. máx.": "60 km/h", Recarga: "4 a 6 h", Bateria: "72V 30Ah lítio", Freio: "Disco duplo" },
+    img: "connect-x11.jpg",
+    focus: "45% 70%",
+    desc: "A versão compacta da linha Connect: pneus largos, painel digital e alarme com controle remoto.",
+    price: 8590,
+    colors: [["Preto", "#1c1f1c"], ["Amarelo", "#f2c200"]],
+    specs: { Motor: "1500W", Autonomia: "55 km", "Vel. máx.": "40 km/h", Recarga: "6 a 8 h", Bateria: "60V 20Ah", Freio: "Disco" },
   },
   {
-    id: "triciclo-cargo",
-    name: "Triciclo Cargo",
-    category: "triciclo",
-    shape: "m-trike",
-    desc: "Feito para entregas e pequenos negócios: cesto reforçado e alta capacidade de carga.",
-    price: 9890,
-    colors: ["#f2c200", "#1c1f1c"],
-    specs: { Motor: "1000W", Autonomia: "50 km", "Vel. máx.": "30 km/h", Recarga: "6 a 8 h", Bateria: "60V 20Ah", Carga: "até 150 kg" },
-  },
-  {
-    id: "stack-1000",
-    name: "Stack 1000W",
+    id: "urban-s",
+    name: "Urban S",
     category: "scooter",
-    shape: "m-city",
-    desc: "Toda a praticidade da Stack com mais potência e bateria maior para trajetos mais longos.",
-    price: 7690,
-    colors: ["#7fbf2a", "#1c1f1c", "#f2c200"],
-    specs: { Motor: "1000W", Autonomia: "60 km", "Vel. máx.": "35 km/h", Recarga: "6 a 8 h", Bateria: "60V 20Ah", Freio: "Disco" },
+    img: "urban-s.jpg",
+    focus: "50% 62%",
+    desc: "Scooter urbana com baú, para-brisa e porta-objetos. Pronta para o trabalho e para o lazer.",
+    price: 6990,
+    colors: [["Laranja", "#e2531f"], ["Branco", "#e9ece6"], ["Cinza", "#5d6658"]],
+    specs: { Motor: "1000W", Autonomia: "55 km", "Vel. máx.": "40 km/h", Recarga: "6 a 8 h", Bateria: "60V 20Ah", Freio: "Disco" },
+  },
+  {
+    id: "triciclo-conforto",
+    name: "Triciclo Conforto",
+    category: "triciclo",
+    img: "triciclo-conforto.jpg",
+    focus: "50% 70%",
+    desc: "Assento largo com encosto, cesto e marcha à ré. Mobilidade com tranquilidade para o dia a dia.",
+    price: 7890,
+    colors: [["Laranja", "#e2711f"], ["Vermelho", "#c4161c"]],
+    specs: { Motor: "800W", Autonomia: "50 km", "Vel. máx.": "25 km/h", Recarga: "6 a 8 h", Bateria: "48V 20Ah", Freio: "Tambor" },
   },
 ];
 
@@ -213,9 +222,7 @@ if (!reduceMotion) onParallax();
 /* ---------- Modelos ---------- */
 const grid = $("#models-grid");
 
-function modelSvg(m, color) {
-  return `<svg viewBox="0 0 400 280" style="color:${color}" aria-hidden="true"><use href="#${m.shape}"/></svg>`;
-}
+const imgSrc = (m) => `assets/img/modelos/${m.img}`;
 
 grid.innerHTML = MODELS.map(
   (m, i) => `
@@ -224,12 +231,12 @@ grid.innerHTML = MODELS.map(
       <span class="card__cat">${m.category}</span>
       ${m.badge ? `<span class="card__badge">${m.badge}</span>` : ""}
     </div>
-    <div class="card__img">${modelSvg(m, m.colors[0])}</div>
+    <div class="card__img"><img src="${imgSrc(m)}" alt="" loading="lazy" decoding="async" style="object-position:${m.focus}"></div>
     <h3 class="card__name">${m.name}</h3>
     <div class="card__meta"><span>${m.specs.Motor}</span><span>·</span><span>${m.specs.Autonomia}</span></div>
     <div class="card__foot">
       <div class="card__price"><small>a partir de</small><strong>${brl(m.price)}</strong></div>
-      <div class="swatches">${m.colors.map((c) => `<i style="background:${c}"></i>`).join("")}</div>
+      <div class="swatches">${m.colors.map(([n, c]) => `<i style="background:${c}" title="${n}"></i>`).join("")}</div>
       <span class="card__go" aria-hidden="true">→</span>
     </div>
   </button>`
@@ -292,25 +299,19 @@ function openModal(m) {
   $("#modal-desc").textContent = m.desc;
   $("#modal-price").textContent = brl(m.price);
   $("#modal-install").textContent = `ou 12x de ${(m.price / 12).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })} sem juros`;
-  modalImg.setAttribute("aria-label", `Ilustração do ${m.name}`);
-  $("use", modalImg).setAttribute("href", `#${m.shape}`);
+  modalImg.src = imgSrc(m);
+  modalImg.alt = `Foto do ${m.name}`;
+  modalImg.style.objectPosition = m.focus;
 
   $("#modal-specs").innerHTML = Object.entries(m.specs)
     .map(([k, v], i) => `<div style="animation-delay:${0.15 + i * 0.05}s"><dt>${k}</dt><dd>${v}</dd></div>`)
     .join("");
 
-  const colors = $("#modal-colors");
-  colors.innerHTML = m.colors
-    .map((c, i) => `<button style="background:${c}" data-color="${c}" aria-label="Cor ${i + 1}" class="${i === 0 ? "is-active" : ""}"></button>`)
-    .join("");
-  const wa = $("#modal-wa");
-  const setColor = (btn) => {
-    $$("button", colors).forEach((b) => b.classList.toggle("is-active", b === btn));
-    modalImg.style.color = btn.dataset.color;
-    wa.href = waLink(`Olá! Tenho interesse no modelo ${m.name} (${brl(m.price)}) que vi no site da Green Ride. Pode me passar mais informações?`);
-  };
-  colors.onclick = (e) => e.target.dataset.color && setColor(e.target);
-  setColor($("button", colors));
+  $("#modal-colors").innerHTML =
+    `<small>Cores</small>` + m.colors.map(([n, c]) => `<span><i style="background:${c}"></i>${n}</span>`).join("");
+  $("#modal-wa").href = waLink(
+    `Olá! Tenho interesse no modelo ${m.name} (${brl(m.price)}) que vi no site da Green Ride. Pode me passar mais informações?`
+  );
 
   // reinicia animação de entrada da imagem
   modalImg.style.animation = "none";
